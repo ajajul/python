@@ -24,4 +24,4 @@ hidden_layer_outputs = np.array([node_0_output, node_1_output])
 
 output = (hidden_layer_outputs * weights['output']).sum()
 
-print(output)
+print("ajju")
