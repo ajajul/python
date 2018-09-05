@@ -1,8 +1,27 @@
-print('This is Python practice')
-print('my name is ajajul')
-print('I just add new data')
-print('Now ging to do new commit')
-print('create new branch')
-print('because I am not sure about It')
-print('updating the master branch')
-print('create new branch')
+import numpy as np
+
+
+input_data = np.array([2, 3])
+
+weights = {
+	'node_0': np.array([1, 1]),
+	'node_1': np.array([-1, 1]),
+	'output': np.array([2, -1])
+	}
+
+
+node_0_input = (input_data * weights['node_0']).sum()
+
+node_0_output = np.tanh(node_0_input)
+
+node_1_input = (input_data * weights['node_1']).sum()
+
+node_1_output = np.tanh(node_1_input)
+
+hidden_layer_outputs = np.array([node_0_output, node_1_output])
+
+# print(hidden_layer_value)
+
+output = (hidden_layer_outputs * weights['output']).sum()
+
+print(output)
