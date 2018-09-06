@@ -12,13 +12,10 @@ weights = {
 
 node_0_input = (input_data * weights['node_0']).sum()
 
-node_0_output = np.tanh(node_0_input)
-
 node_1_input = (input_data * weights['node_1']).sum()
 
-node_1_output = np.tanh(node_1_input)
 
-hidden_layer_outputs = np.array([node_0_output, node_1_output])
+hidden_layer_outputs = np.array([node_0_input, node_1_input])
 
 # print(hidden_layer_value)
 
